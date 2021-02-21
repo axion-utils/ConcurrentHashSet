@@ -1,10 +1,7 @@
 ﻿//===========================================================
 //
-// Original source from Microsoft:
+// This source code has been modified from the following following location:
 // https://referencesource.microsoft.com/#mscorlib/system/Collections/Concurrent/ConcurrentDictionary.cs,4d0f4ac22dbeaf08
-// Copyright (c) Microsoft Corporation.  All rights reserved.
-//
-// Author: Wesley Hamilton
 //
 //===========================================================
 
