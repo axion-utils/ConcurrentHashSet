@@ -18,7 +18,7 @@ ConcurrentHashSet<string> set = new ConcurrentHashSet<string>()
 	null,
 };
 Console.WriteLine("Count: " + set.Count);
-// Count: 3
+// Count: 4
 
 set.Clear();
 Console.WriteLine(set.IsEmpty ? "Empty" : "Not Empty");
@@ -27,7 +27,6 @@ Console.WriteLine(set.IsEmpty ? "Empty" : "Not Empty");
 for (int i = 0; i < 10; i++) {
 	set.Add(i.ToString());
 }
-
 Console.WriteLine("Contents: " + string.Join(", ", set.OrderBy(x => x)));
 // Contents: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 
@@ -47,9 +46,10 @@ if (set.TryGetValue("7", out string str)) {
 }
 // 7 was found
 
-if (set.TryGetValue("8", out str)) {
-	Console.WriteLine(str + " was found");
+if (set.TryAdd("8", out str)) {
+	Console.WriteLine(str + " was added");
 }
+// 8 was added
 ```
 
 ## License
