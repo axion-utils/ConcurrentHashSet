@@ -1,0 +1,6 @@
+/.vs
+/packages
+/*/bin
+/*/lib
+/*/obj
+/TestResults
