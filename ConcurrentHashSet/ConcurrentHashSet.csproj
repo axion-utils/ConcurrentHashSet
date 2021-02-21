@@ -19,6 +19,7 @@
     <FileVersion>1.0.0.0</FileVersion>
     <SignAssembly>false</SignAssembly>
     <RootNamespace>Axion.Collections.Concurrent</RootNamespace>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
