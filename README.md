@@ -7,49 +7,17 @@ It is similar to the i3arnon's [ConcurrentHashSet](https://github.com/i3arnon/Co
 Some additions include TryUpdate, TryAdd, TryGetValue, GetOrAdd, and AddOrUpdate. It also implements the non-generic version 
 of ICollection. This was done for performance reasons and to allow the user to inspect modified and stored values in the collection.
 
-## Example
+## Methods
 
 ```csharp
-ConcurrentHashSet<string> set = new ConcurrentHashSet<string>()
-{
-	"string",
-	"testing",
-	"word",
-	null,
-};
-Console.WriteLine("Count: " + set.Count);
-// Count: 4
-
-set.Clear();
-Console.WriteLine(set.IsEmpty ? "Empty" : "Not Empty");
-// Empty
-
-for (int i = 0; i < 10; i++) {
-	set.Add(i.ToString());
-}
-Console.WriteLine("Contents: " + string.Join(", ", set.OrderBy(x => x)));
-// Contents: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
-
-foreach (string item in set.Take(5).ToList()) {
-	if (set.TryRemove(item, out string removed)) {
-		Console.WriteLine("Removed: " + removed);
-	}
-}
-// Removed: 0
-// Removed: 3
-// Removed: 2
-// Removed: 9
-// Removed: 8
-
-if (set.TryGetValue("7", out string str)) {
-	Console.WriteLine(str + " was found");
-}
-// 7 was found
-
-if (set.TryAdd("8", out str)) {
-	Console.WriteLine(str + " was added");
-}
-// 8 was added
+bool Add(T value);
+bool Remove(T value);
+bool TryAdd(T value, out T currentValue);
+bool TryRemove(T value, out T oldValue);
+bool TryUpdate(T value);
+bool TryGetValue(T value, out T currentValue);
+T GetOrAdd(T value);
+void AddOrUpdate(T value);
 ```
 
 ## License

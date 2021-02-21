@@ -8,7 +8,8 @@
     <NeutralLanguage>en-us</NeutralLanguage>
     <PackageReleaseNotes></PackageReleaseNotes>
     <PackageTags>collections concurrency</PackageTags>
-    <PackageLicense></PackageLicense>
+    <PackageLicense>MIT</PackageLicense>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/axion-utils/ConcurrentHashSet</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright></Copyright>
@@ -38,7 +39,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <OutputPath>bin\lib\</OutputPath>
-    <DocumentationFile>bin\lib\Axion.Collections.ConcurrentHashSet.xml</DocumentationFile>
+    <DocumentationFile>bin\lib\Axion.ConcurrentHashSet.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>
