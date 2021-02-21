@@ -1,6 +1,6 @@
 ## Introduction
 
-[Nuget: Axion.Collections.ConcurrentHashSet](https://www.nuget.org/packages/Axion.Collections.ConcurrentHashSet/)
+[Nuget: Axion.ConcurrentHashSet](https://www.nuget.org/packages/Axion.ConcurrentHashSet/)
 
 This package is a modified implementation of .NET's ConcurrentDictionary with a reduced memory footprint because it does not store any keys. 
 It is similar to the i3arnon's [ConcurrentHashSet](https://github.com/i3arnon/ConcurrentHashSet), except that it includes more functionality.
