@@ -27,4 +27,5 @@ The original source code comes from [ConcurrentDictionary](https://referencesour
 Their software is under the following license: [MICROSOFT REFERENCE SOURCE LICENSE (MS-RSL) license](https://referencesource.microsoft.com/license.html)
 
 This license suggests that the code is free for "reference use only". I do not hold any rights to this software, nor do I intend to make any royalties from
-the distribution of it. If you distribute this software then you do so at your own risk. If I hold any Copyright to this software, it is under the [MIT license](https://raw.githubusercontent.com/licenses/license-templates/master/templates/mit.txt).
+the distribution of it. If you distribute this software then you do so at your own risk. If I hold any copyright to this software then it is under the 
+[MIT license](https://raw.githubusercontent.com/licenses/license-templates/master/templates/mit.txt).
