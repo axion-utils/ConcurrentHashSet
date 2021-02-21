@@ -10,51 +10,46 @@ of ICollection. This was done for performance reasons and to allow the user to i
 ## Example
 
 ```csharp
-
-public static void Main()
+ConcurrentHashSet<string> set = new ConcurrentHashSet<string>()
 {
-	ConcurrentHashSet<string> set = new ConcurrentHashSet<string>()
-	{
-		"string",
-		"testing",
-		"word",
-	};
-	Console.WriteLine(set.IsEmpty ? "Empty" : "Not Empty");
-	set.Clear();
-	Console.WriteLine(set.IsEmpty ? "Empty" : "Not Empty");
+	"string",
+	"testing",
+	"word",
+	null,
+};
+Console.WriteLine("Count: " + set.Count);
+// Count: 3
 
-	for (int i = 0; i < 10; i++) {
-		set.Add(i.ToString());
-	}
+set.Clear();
+Console.WriteLine(set.IsEmpty ? "Empty" : "Not Empty");
+// Empty
 
-	Console.WriteLine("Contents: " + string.Join(", ", set.OrderBy(x => x)));
-
-	foreach (string item in set.Take(5).ToList()) {
-		if (set.TryRemove(item, out string removed)) {
-			Console.WriteLine("Removed: " + removed);
-		}
-	}
-	if (set.TryGetValue("7", out string str)) {
-		Console.WriteLine(str + " was found");
-	}
-
-	if (set.TryGetValue("8", out str)) {
-		Console.WriteLine(str + " was found");
-	}
+for (int i = 0; i < 10; i++) {
+	set.Add(i.ToString());
 }
 
-// Output:
-
-// Not Empty
-// Empty
+Console.WriteLine("Contents: " + string.Join(", ", set.OrderBy(x => x)));
 // Contents: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+foreach (string item in set.Take(5).ToList()) {
+	if (set.TryRemove(item, out string removed)) {
+		Console.WriteLine("Removed: " + removed);
+	}
+}
 // Removed: 0
 // Removed: 3
 // Removed: 2
 // Removed: 9
 // Removed: 8
+
+if (set.TryGetValue("7", out string str)) {
+	Console.WriteLine(str + " was found");
+}
 // 7 was found
 
+if (set.TryGetValue("8", out str)) {
+	Console.WriteLine(str + " was found");
+}
 ```
 
 ## License
