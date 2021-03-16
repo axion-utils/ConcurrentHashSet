@@ -705,7 +705,7 @@ namespace Axion.Collections.Concurrent
 		/// instance has been replaced in the meantime or not. The Tables instance is passed in to
 		/// prevent To prevent multiple threads from resizing the table.
 		/// </summary>
-		/// <param name="tables">The </param>
+		/// <param name="tables"></param>
 		private void GrowTable(Tables tables)
 		{
 			int locksAcquired = 0;
